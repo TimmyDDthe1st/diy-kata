@@ -6,5 +6,6 @@ describe("booleanToWord", () => {
     expect(booleanToWord(false)).toBe("No");
     expect(booleanToWord()).toBe("No");
     expect(booleanToWord(2)).toBe("Yes");
-  })
+    expect(booleanToWord(null)).toBe("No");
+  });
 });
