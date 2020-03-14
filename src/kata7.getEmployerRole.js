@@ -1,12 +1,8 @@
 const getEmployerRole = (employeeName, employees) => {
-  let role;
-  employees.forEach(element => {
-    if (element.name === employeeName) {
-      role = element.role;
-    }
-  });
-
-  return role;
+  return employees
+    .filter(employee => employee.name === employeeName)
+    .map(employee => employee.role)
+    .toString();
 };
 
 module.exports = getEmployerRole;
